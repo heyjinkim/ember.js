@@ -4,6 +4,11 @@ require("ember-handlebars/controls/button");
 require("ember-handlebars/controls/text_area");
 require("ember-handlebars/controls/select");
 
+/**
+@module ember
+@submodule ember-handlebars
+*/
+
 function normalizeHash(hash, hashTypes) {
   for (var prop in hash) {
     if (hashTypes[prop] === 'ID') {
@@ -14,14 +19,14 @@ function normalizeHash(hash, hashTypes) {
 }
 
 /**
- * `{{input}}` inserts a new instance of either Ember.TextField or
- * Ember.Checkbox, depending on the `type` option passed in. If no `type`
- * is supplied it defaults to Ember.TextField.
- *
- * @method input
- * @for Ember.Handlebars.helpers
- * @param {Hash} options
- */
+  `{{input}}` inserts a new instance of either Ember.TextField or
+  Ember.Checkbox, depending on the `type` option passed in. If no `type`
+  is supplied it defaults to Ember.TextField.
+
+  @method input
+  @for Ember.Handlebars.helpers
+  @param {Hash} options
+*/
 Ember.Handlebars.registerHelper('input', function(options) {
   Ember.assert('You can only pass attributes to the `input` helper, not arguments', arguments.length < 2);
 
@@ -45,13 +50,13 @@ Ember.Handlebars.registerHelper('input', function(options) {
 });
 
 /**
- * `{{textarea}}` inserts a new instance of Ember.TextArea into the template
- * passing its options to `Ember.TextArea`'s `create` method.
- *
- * @method textarea
- * @for Ember.Handlebars.helpers
- * @param {Hash} options
- */
+  `{{textarea}}` inserts a new instance of Ember.TextArea into the template
+  passing its options to `Ember.TextArea`'s `create` method.
+
+  @method textarea
+  @for Ember.Handlebars.helpers
+  @param {Hash} options
+*/
 Ember.Handlebars.registerHelper('textarea', function(options) {
   Ember.assert('You can only pass attributes to the `textarea` helper, not arguments', arguments.length < 2);
 
