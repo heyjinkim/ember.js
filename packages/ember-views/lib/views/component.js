@@ -59,7 +59,7 @@ var get = Ember.get, set = Ember.set, isNone = Ember.isNone;
   ```js
   App.AppProfileComponent = Ember.Component.extend({
     hello: function(name) {
-      console.log("Hello", name)
+      console.log("Hello", name);
     }
   });
   ```
@@ -141,7 +141,7 @@ Ember.Component = Ember.View.extend(Ember.TargetActionSupport, {
     argument. The context will be supplied as the first argument in the
     target's action method. Example:
 
-    ```javascript
+    ```js
     App.MyTreeComponent = Ember.Component.extend({
       click: function() {
         this.sendAction('didClickTreeNode', this.get('node'));
